@@ -1,0 +1,7 @@
+com/stackroute/friendsBook/FriendsBookApplication.class
+com/stackroute/friendsBook/model/User.class
+com/stackroute/friendsBook/service/UserService.class
+com/stackroute/friendsBook/Exceptions/UserAlreadyExistsException.class
+com/stackroute/friendsBook/POJO/QueryVariables.class
+com/stackroute/friendsBook/resource/UserResource.class
+com/stackroute/friendsBook/repository/UserRepository.class
