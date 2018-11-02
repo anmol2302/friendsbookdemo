@@ -1,5 +1,8 @@
+com/stackroute/friendsBook/Notifications/AlertMessages.class
+com/stackroute/friendsBook/Constants/AlertConstants.class
 com/stackroute/friendsBook/FriendsBookApplication.class
 com/stackroute/friendsBook/model/User.class
+com/stackroute/friendsBook/Config/SwaggerConfig.class
 com/stackroute/friendsBook/service/UserService.class
 com/stackroute/friendsBook/Exceptions/UserAlreadyExistsException.class
 com/stackroute/friendsBook/POJO/QueryVariables.class
