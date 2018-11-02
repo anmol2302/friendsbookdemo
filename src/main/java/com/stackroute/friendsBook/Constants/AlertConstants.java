@@ -12,7 +12,14 @@ public class AlertConstants {
     public static String deleteErrorMsg="probelem with deleting user";
     public static String validationErrorMsg="couldn't validate user";
     public static  String saveErrorMsg="couldn't save user";
-
-
+    public static String userAlreadyFriendErrorMsg="users are already friend of each other";
+    public static String noIdFound="user with this id doesnt exists";
 
 }
+
+
+
+
+
+
+

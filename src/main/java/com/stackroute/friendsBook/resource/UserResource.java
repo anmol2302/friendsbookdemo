@@ -23,13 +23,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/user")
-@Api(value = "friendsBook", description="operations pertaining to friendsBook")
+@Api(value = "friendsBook", description = "operations pertaining to friendsBook")
 public class UserResource {
 
     @Autowired
     UserService userService;
 
-    @ApiOperation(value="To add a new User")
+    @ApiOperation(value = "To add a new User")
     @PostMapping("/addUser")
     public ResponseEntity<?> addUser(@Valid @RequestBody User user) throws UserAlreadyExistsException {
         try {
@@ -47,7 +47,7 @@ public class UserResource {
         }
     }
 
-    @ApiOperation(value="To get a list of all users")
+    @ApiOperation(value = "To get a list of all users")
     @GetMapping("/getAllUser")
     public ResponseEntity<?> getAllUser() {
 
@@ -67,13 +67,24 @@ public class UserResource {
 
     }
 
-    @ApiOperation(value="To add a friend")
+    @ApiOperation(value = "To add a friend")
     @PostMapping("/addFriend/{idPerson1}/{idPerson2}")
     public ResponseEntity<?> addFriend(@Valid @PathVariable("idPerson1") long idPerson1, @PathVariable("idPerson2") long idPerson2) {
         try {
 
+            Object addFriendResponse = userService.addFriend(idPerson1, idPerson2);
 
-            return new ResponseEntity<String>(userService.addFriend(idPerson1, idPerson2) + "", HttpStatus.OK);
+            if (addFriendResponse == null) {
+
+                return new ResponseEntity<String>(AlertConstants.userAlreadyFriendErrorMsg, HttpStatus.CONFLICT);
+            } else if (addFriendResponse.equals(AlertConstants.noIdFound)) {
+
+                return new ResponseEntity<String>(addFriendResponse.toString(), HttpStatus.NOT_FOUND);
+            } else {
+
+                return new ResponseEntity<Object>(addFriendResponse, HttpStatus.OK);
+            }
+
         } catch (Exception e) {
 
             return new ResponseEntity<String>(false + "", HttpStatus.CONFLICT);
@@ -82,7 +93,7 @@ public class UserResource {
 
     }
 
-    @ApiOperation(value="To get user by Id")
+    @ApiOperation(value = "To get user by Id")
     @GetMapping("/getById/{id}")
     public ResponseEntity<?> getById(@PathVariable("id") long id) {
 
@@ -101,7 +112,7 @@ public class UserResource {
     }
 
 
-    @ApiOperation(value="To check if a particular user exists")
+    @ApiOperation(value = "To check if a particular user exists")
     @PostMapping("/isUserExists")
     public ResponseEntity<?> vaildateUserLogin(@RequestBody User user) {
 
@@ -114,7 +125,7 @@ public class UserResource {
         }
     }
 
-    @ApiOperation(value="To delete all users")
+    @ApiOperation(value = "To delete all users")
     @DeleteMapping("/deleteAllUsers")
     public ResponseEntity<?> deleteAllusers() {
 
@@ -128,7 +139,7 @@ public class UserResource {
 
     }
 
-    @ApiOperation(value="To display First level friends recommendations")
+    @ApiOperation(value = "To display First level friends recommendations")
     @GetMapping("/getRecommendations/{level}/{id}")
     public ResponseEntity<?> getFirstLevelRecommendations(@PathVariable("level") int level, @PathVariable("id") long id) {
 
@@ -154,7 +165,7 @@ public class UserResource {
 
     }
 
-    @ApiOperation(value="To display second level friends recommendations")
+    @ApiOperation(value = "To display second level friends recommendations")
     @GetMapping("/getUserFriendById/{userId}")
     public ResponseEntity<?> getUserFriendBYId(@PathVariable("userId") long userId) {
 

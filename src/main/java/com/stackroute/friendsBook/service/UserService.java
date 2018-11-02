@@ -1,5 +1,6 @@
 package com.stackroute.friendsBook.service;
 
+import com.stackroute.friendsBook.Constants.AlertConstants;
 import com.stackroute.friendsBook.Exceptions.UserAlreadyExistsException;
 import com.stackroute.friendsBook.Notifications.AlertMessages;
 import com.stackroute.friendsBook.model.User;
@@ -34,39 +35,46 @@ public class UserService {
 
     }
 
-    public List<User> addFriend(long person1Id, long person2Id) {
-
-        boolean isMsgAlertSent=false;
+    public Object addFriend(long person1Id, long person2Id) {
+        boolean isMsgAlertSent = false;
         try {
-            //User person1Obj = userRepository.findOne(person1Id);
-            //User person2Obj = userRepository.findOne(person2Id);
-            User person1Obj = userRepository.getByid(person1Id);
-            User person2Obj = userRepository.getByid(person2Id);
-
-if(!person1Obj.getFriends().contains(person2Id)){
-            person1Obj.getFriends().add(person2Obj.getId());
-            person2Obj.getFriends().add(person1Obj.getId());
-            userRepository.save(person1Obj);
-            userRepository.save(person2Obj);}
-            //return userRepository.createRelationship(userRepository.findOne(person1Id).getEmail(), userRepository.findOne(person2Id).getEmail());
-            try{
-               AlertMessages.sendMessageToUser("friends",person1Obj.getName(),person1Obj.getContactNo(),person2Obj.getName(),person2Obj.getContactNo());
+            User person1Obj,person2Obj;
+            if(userRepository.existsById(person1Id)){
+           person1Obj= userRepository.getByid(person1Id);}
+           else{
+               return AlertConstants.noIdFound;
             }
-            catch(Exception e){
+            if(userRepository.existsById(person2Id)){
+             person2Obj = userRepository.getByid(person2Id);}
+             else{
+                 return AlertConstants.noIdFound;
+            }
+            if (!(person1Obj.getFriends().contains(person2Id)&& person2Obj.getFriends().contains(person1Id))){
+                person1Obj.getFriends().add(person2Obj.getId());
+                person2Obj.getFriends().add(person1Obj.getId());
+                userRepository.save(person1Obj);
+                userRepository.save(person2Obj);
+                try {
+                    AlertMessages.sendMessageToUser("friends", person1Obj.getName(), person1Obj.getContactNo(), person2Obj.getName(), person2Obj.getContactNo());
+                } catch (Exception e) {
 
-                return userRepository.createRelationship(userRepository.getByid(person1Id).getEmail(), userRepository.getByid(person2Id).getEmail());
-
-
+                }
             }
 
+            else{
 
-            return userRepository.createRelationship(userRepository.getByid(person1Id).getEmail(), userRepository.getByid(person2Id).getEmail());
+                return null;
+            }
+
 
         } catch (Exception e) {
             e.printStackTrace();
             return null;
 
         }
+
+        return userRepository.createRelationship(userRepository.getByid(person1Id).getEmail(), userRepository.getByid(person2Id).getEmail());
+
     }
 
     public User getBYId(long id) {

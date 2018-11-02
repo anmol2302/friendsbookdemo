@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bea2db4-89eb-43e5-8507-b434041b16b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/Config/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/Config/SwaggerConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/Exceptions/UserAlreadyExistsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/Exceptions/UserAlreadyExistsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/FriendsBookApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/FriendsBookApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/Notifications/AlertMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/Notifications/AlertMessages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/POJO/QueryVariables.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/POJO/QueryVariables.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/resource/UserResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/resource/UserResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/stackroute/friendsBook/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/friendsBook-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/friendsBook-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/friendsBook-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/friendsBook-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2018-10-30T16-13-05_159.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2018-10-30T16-15-00_667.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2018-10-31T18-47-18_262.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.stackroute.friendsBook.FriendsBookApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.stackroute.friendsBook.FriendsBookApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.stackroute.friendsBook.FriendsBookApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.stackroute.friendsBook.FriendsBookApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/stackroute/friendsBook/resource/UserResourceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/stackroute/friendsBook/resource/UserResourceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/service/UserService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,29 +64,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="7" />
+          <entry key="class" value="2" />
+          <entry key="java" value="10" />
           <entry key="xml" value="1" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="7" />
+          <entry key="CLASS" value="2" />
+          <entry key="JAVA" value="10" />
           <entry key="XML" value="1" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2877" />
+          <entry key="java" value="3477" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2877" />
+          <entry key="JAVA" value="3477" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -116,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/FriendsBookApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="95">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="e#573#574#0" expanded="true" />
                 <element signature="e#637#638#0" expanded="true" />
@@ -128,10 +109,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/lang/ClassLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="498" selection-start-line="498" selection-end-line="498" />
+            <state relative-caret-position="188">
+              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.10.RELEASE/spring-aop-5.0.10.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
@@ -143,6 +133,20 @@
               <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
+                <element signature="e#1750#1751#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,9 +167,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/stackroute/friendsBook/service/UserServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="-328">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#1555#1556#0" expanded="true" />
                 <element signature="e#1597#1598#0" expanded="true" />
               </folding>
@@ -176,8 +181,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-575">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            <state relative-caret-position="133">
+              <caret line="42" column="13" lean-forward="true" selection-end-line="178" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -187,33 +201,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/stackroute/friendsBook/FriendsBookApplicationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-139">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -240,14 +227,14 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Notifications/AlertMessages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/FriendsBookApplication.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/stackroute/friendsBook/resource/UserResourceTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/stackroute/friendsBook/service/UserServiceTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java" />
       </list>
     </option>
   </component>
@@ -267,7 +254,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="75" />
     <option name="y" value="27" />
     <option name="width" value="1221" />
@@ -328,28 +315,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
+              <item name="Constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
               <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,7 +344,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541152920969" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541155424135" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
@@ -376,7 +360,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTests">
+  <component name="RunManager" selected="Application.FriendsBookApplication">
+    <configuration name="FriendsBookApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.stackroute.friendsBook.FriendsBookApplication" />
+      <module name="friendsBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stackroute.friendsBook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserResourceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="friendsBook" />
       <extension name="coverage">
@@ -387,22 +384,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.stackroute.friendsBook.resource" />
       <option name="MAIN_CLASS_NAME" value="com.stackroute.friendsBook.resource.UserResourceTests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserResourceTests.addUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="friendsBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.stackroute.friendsBook.resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.stackroute.friendsBook.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.stackroute.friendsBook.resource.UserResourceTests" />
-      <option name="METHOD_NAME" value="addUsers" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -455,18 +436,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.UserResourceTests" />
-      <item itemvalue="JUnit.UserResourceTests.addUsers" />
       <item itemvalue="JUnit.UserResourceTests.addUsersFailure" />
       <item itemvalue="JUnit.UserResourceTests.getAllUsers" />
       <item itemvalue="JUnit.UserServiceTests" />
+      <item itemvalue="Application.FriendsBookApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FriendsBookApplication" />
         <item itemvalue="JUnit.UserServiceTests" />
         <item itemvalue="JUnit.UserResourceTests" />
         <item itemvalue="JUnit.UserResourceTests.getAllUsers" />
         <item itemvalue="JUnit.UserResourceTests.addUsersFailure" />
-        <item itemvalue="JUnit.UserResourceTests.addUsers" />
       </list>
     </recent_temporary>
   </component>
@@ -510,7 +491,8 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -521,7 +503,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32952693" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32952693" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,7 +520,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.32954547" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32954547" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -577,13 +559,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.10.RELEASE/spring-aop-5.0.10.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -601,43 +576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="49" column="45" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-139">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/stackroute/friendsBook/FriendsBookApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/FriendsBookApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <marker date="1541149792493" expanded="true" signature="625:819" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,21 +617,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/FriendsBookApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <marker date="1541149792493" expanded="true" signature="625:819" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.10.RELEASE/spring-aop-5.0.10.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/Constants/AlertConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/stackroute/friendsBook/service/UserServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="-328">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1555#1556#0" expanded="true" />
             <element signature="e#1597#1598#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="133">
+          <caret line="42" column="13" lean-forward="true" selection-end-line="178" selection-end-column="1" />
         </state>
       </provider>
     </entry>
