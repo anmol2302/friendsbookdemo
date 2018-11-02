@@ -13,7 +13,7 @@ services:
 
   friendsbook:
     image:  friendsbook
-    build:  ../friendsBookStackroute
+    build:  ../friendsbookdemo
     restart:  always
     network_mode:  host
     container_name:  friendsbook
