@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bea2db4-89eb-43e5-8507-b434041b16b3" name="Default Changelist" comment="" />
+    <list default="true" id="1bea2db4-89eb-43e5-8507-b434041b16b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/friendbook" beforeDir="false" afterPath="$PROJECT_DIR$/friendbook" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendbook/docker-compose.yml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +181,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+              <caret line="171" selection-start-line="171" selection-end-line="171" />
             </state>
           </provider>
         </entry>
@@ -269,68 +272,6 @@
               <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
               <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
-              <item name="Config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
-              <item name="Constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="friendsBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="friendsBookStackroute" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="friendsBook" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -340,7 +281,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541157768475" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541162697501" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
@@ -488,9 +429,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -516,7 +456,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="7" visible="true" weight="0.32954547" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32954547" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -673,7 +613,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/stackroute/friendsBook/resource/UserResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
         </state>
       </provider>
     </entry>
