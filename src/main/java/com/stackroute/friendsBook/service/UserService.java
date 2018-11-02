@@ -1,6 +1,7 @@
 package com.stackroute.friendsBook.service;
 
 import com.stackroute.friendsBook.Exceptions.UserAlreadyExistsException;
+import com.stackroute.friendsBook.Notifications.AlertMessages;
 import com.stackroute.friendsBook.model.User;
 import com.stackroute.friendsBook.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,20 +35,31 @@ public class UserService {
     }
 
     public List<User> addFriend(long person1Id, long person2Id) {
+
+        boolean isMsgAlertSent=false;
         try {
-
-
             //User person1Obj = userRepository.findOne(person1Id);
             //User person2Obj = userRepository.findOne(person2Id);
             User person1Obj = userRepository.getByid(person1Id);
             User person2Obj = userRepository.getByid(person2Id);
 
-
+if(!person1Obj.getFriends().contains(person2Id)){
             person1Obj.getFriends().add(person2Obj.getId());
             person2Obj.getFriends().add(person1Obj.getId());
             userRepository.save(person1Obj);
-            userRepository.save(person2Obj);
+            userRepository.save(person2Obj);}
             //return userRepository.createRelationship(userRepository.findOne(person1Id).getEmail(), userRepository.findOne(person2Id).getEmail());
+            try{
+               AlertMessages.sendMessageToUser("friends",person1Obj.getName(),person1Obj.getContactNo(),person2Obj.getName(),person2Obj.getContactNo());
+            }
+            catch(Exception e){
+
+                return userRepository.createRelationship(userRepository.getByid(person1Id).getEmail(), userRepository.getByid(person2Id).getEmail());
+
+
+            }
+
+
             return userRepository.createRelationship(userRepository.getByid(person1Id).getEmail(), userRepository.getByid(person2Id).getEmail());
 
         } catch (Exception e) {

@@ -2,9 +2,12 @@ package com.stackroute.friendsBook.resource;
 
 import ch.qos.logback.core.pattern.util.RegularEscapeUtil;
 
+import com.stackroute.friendsBook.Constants.AlertConstants;
 import com.stackroute.friendsBook.Exceptions.UserAlreadyExistsException;
+import com.stackroute.friendsBook.Notifications.AlertMessages;
 import com.stackroute.friendsBook.model.User;
 import com.stackroute.friendsBook.service.UserService;
+import javafx.scene.control.Alert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.repository.query.Param;
@@ -24,94 +27,84 @@ public class UserResource {
     UserService userService;
 
 
-    @PostMapping("/postAddUser")
-    public ResponseEntity<?> addUser(@Valid @RequestBody User user) throws UserAlreadyExistsException { try{
+    @PostMapping("/addUser")
+    public ResponseEntity<?> addUser(@Valid @RequestBody User user) throws UserAlreadyExistsException {
+        try {
 
-        try{
-            return new ResponseEntity<User>(userService.addUser(user), HttpStatus.OK);}
+            try {
+                return new ResponseEntity<User>(userService.addUser(user), HttpStatus.OK);
+            } catch (UserAlreadyExistsException e) {
 
-        catch(UserAlreadyExistsException e){
+                return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
 
-            return new ResponseEntity<>(e.getMessage(),HttpStatus.CONFLICT);
-
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<String>(AlertConstants.saveErrorMsg, HttpStatus.CONFLICT);
         }
     }
-    catch(Exception e){
-        e.printStackTrace();
-        return new ResponseEntity<String>("user not saved",HttpStatus.CONFLICT);
-    }
-    }
+
     @GetMapping("/getAllUser")
-    public ResponseEntity<?> getAllUser(){
+    public ResponseEntity<?> getAllUser() {
 
 
-        try{
+        try {
 
 
-            return new ResponseEntity<List<User>>(userService.getAll(),HttpStatus.OK);
+            return new ResponseEntity<List<User>>(userService.getAll(), HttpStatus.OK);
 
 
+        } catch (Exception e) {
+
+
+            return new ResponseEntity<String>("not availaible", HttpStatus.CONFLICT);
         }
-        catch(Exception e){
-
-
-
-            return new ResponseEntity<String>("not availaible",HttpStatus.CONFLICT);
-        }
-
 
 
     }
 
 
+    @PostMapping("/addFriend/{idPerson1}/{idPerson2}")
+    public ResponseEntity<?> addFriend(@Valid @PathVariable("idPerson1") long idPerson1, @PathVariable("idPerson2") long idPerson2) {
+        try {
 
-    @PostMapping("/postAddFriend/{idPerson1}/{idPerson2}")
-    public ResponseEntity<?> addFriend(@Valid @PathVariable("idPerson1") long idPerson1,@PathVariable("idPerson2") long idPerson2){
-        try{
 
+            return new ResponseEntity<String>(userService.addFriend(idPerson1, idPerson2) + "", HttpStatus.OK);
+        } catch (Exception e) {
 
-            return new ResponseEntity<String>(userService.addFriend(idPerson1,idPerson2)+"",HttpStatus.OK);
+            return new ResponseEntity<String>(false + "", HttpStatus.CONFLICT);
         }
-        catch(Exception e){
-
-            return new ResponseEntity<String>(false+"",HttpStatus.CONFLICT);
-        }
-
 
 
     }
+
     @GetMapping("/getById/{id}")
-    public ResponseEntity<?> getById(@PathVariable("id") long id){
+    public ResponseEntity<?> getById(@PathVariable("id") long id) {
 
-        try{
+        try {
 
-            return new ResponseEntity<User>(userService.getBYId(id),HttpStatus.OK);
+            return new ResponseEntity<User>(userService.getBYId(id), HttpStatus.OK);
 
-        }
-        catch(Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
 
-            return new ResponseEntity<String>("no id",HttpStatus.CONFLICT);
+            return new ResponseEntity<String>(AlertConstants.userNotFound, HttpStatus.NOT_FOUND);
         }
-
 
 
     }
 
 
-    @PostMapping("/postIsUserExists")
-    public ResponseEntity<?> vaildateUserLogin(@RequestBody  User user){
+    @PostMapping("/isUserExists")
+    public ResponseEntity<?> vaildateUserLogin(@RequestBody User user) {
 
-        try{
-            System.out.println("the maisl os "+user.getEmail());
-            return new ResponseEntity<User>(userService.valdiateUserEmail(user.getEmail()),HttpStatus.OK);
-        }
-
-        catch(Exception e){
+        try {
+            return new ResponseEntity<User>(userService.valdiateUserEmail(user.getEmail()), HttpStatus.OK);
+        } catch (Exception e) {
 
 
-            return new ResponseEntity<String>("Facing Trouble",HttpStatus.CONFLICT);
+            return new ResponseEntity<String>(AlertConstants.validationErrorMsg, HttpStatus.NOT_ACCEPTABLE);
         }
     }
 
@@ -123,69 +116,44 @@ public class UserResource {
             return new ResponseEntity<>(userService.deleteAllUsers(), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
-            return new ResponseEntity<>("error occures", HttpStatus.CONFLICT);
+            return new ResponseEntity<>(AlertConstants.deleteErrorMsg, HttpStatus.EXPECTATION_FAILED);
         }
 
     }
 
-    @GetMapping("/getFirstLevelRecommendations/{id}")
-    public  ResponseEntity<?> getFirstLevelRecommendations(@PathVariable("id") long id)
-    {
+    @GetMapping("/getRecommendations/{level}/{id}")
+    public ResponseEntity<?> getFirstLevelRecommendations(@PathVariable("level") int level, @PathVariable("id") long id) {
 
-        try{
+        try {
 
-            return new ResponseEntity<List<User>>(userService.getFirstLevelRecommendation(id),HttpStatus.OK);
-        }
+            if (level == 1) {
 
-        catch (Exception e){
-
-
-            return new ResponseEntity<Boolean>(false,HttpStatus.CONFLICT);
-        }
-
-    }
-    @GetMapping("/getSecondLevelRecommendations/{id}")
-    public  ResponseEntity<?> getSecondLevelRecommendations(@PathVariable("id") long id)
-    {
-
-        try{
-
-            return new ResponseEntity<List<User>>(userService.getSecondeLevelRecommendation(id),HttpStatus.OK);
-        }
-
-        catch (Exception e){
+                return new ResponseEntity<List<User>>(userService.getFirstLevelRecommendation(id), HttpStatus.OK);
+            } else if (level == 2) {
+                return new ResponseEntity<List<User>>(userService.getSecondeLevelRecommendation(id), HttpStatus.OK);
 
 
-            return new ResponseEntity<Boolean>(false,HttpStatus.CONFLICT);
+            } else {
+
+
+                return new ResponseEntity<String>(AlertConstants.recommendationAlert, HttpStatus.CONFLICT);
+            }
+        } catch (Exception e) {
+
+
+            return new ResponseEntity<Boolean>(false, HttpStatus.CONFLICT);
         }
 
     }
-
-
-
 
     @GetMapping("/getUserFriendById/{userId}")
-    public ResponseEntity<?> getUserFriendBYId(@PathVariable("userId") long userId){
+    public ResponseEntity<?> getUserFriendBYId(@PathVariable("userId") long userId) {
 
-        try{
+        try {
+            return new ResponseEntity<>(userService.getUserFriendById(userId), HttpStatus.OK);
 
-            return new ResponseEntity<>(userService.getUserFriendById(userId),HttpStatus.OK);
-
-
-
+        } catch (Exception e) {
+            return new ResponseEntity<String>(AlertConstants.userNotFound + userId, HttpStatus.NOT_FOUND);
         }
-        catch( Exception e){
-
-return new ResponseEntity<String>("sorry couldnt find user with "+userId,HttpStatus.CONFLICT);
-
-
-
-        }
-
-
-
-
-
     }
-
 }
