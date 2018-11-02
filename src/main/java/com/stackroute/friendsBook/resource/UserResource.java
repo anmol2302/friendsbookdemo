@@ -7,6 +7,8 @@ import com.stackroute.friendsBook.Exceptions.UserAlreadyExistsException;
 import com.stackroute.friendsBook.Notifications.AlertMessages;
 import com.stackroute.friendsBook.model.User;
 import com.stackroute.friendsBook.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import javafx.scene.control.Alert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,12 +23,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/user")
+@Api(value = "friendsBook", description="operations pertaining to friendsBook")
 public class UserResource {
 
     @Autowired
     UserService userService;
 
-
+    @ApiOperation(value="To add a new User")
     @PostMapping("/addUser")
     public ResponseEntity<?> addUser(@Valid @RequestBody User user) throws UserAlreadyExistsException {
         try {
@@ -44,6 +47,7 @@ public class UserResource {
         }
     }
 
+    @ApiOperation(value="To get a list of all users")
     @GetMapping("/getAllUser")
     public ResponseEntity<?> getAllUser() {
 
@@ -63,7 +67,7 @@ public class UserResource {
 
     }
 
-
+    @ApiOperation(value="To add a friend")
     @PostMapping("/addFriend/{idPerson1}/{idPerson2}")
     public ResponseEntity<?> addFriend(@Valid @PathVariable("idPerson1") long idPerson1, @PathVariable("idPerson2") long idPerson2) {
         try {
@@ -78,6 +82,7 @@ public class UserResource {
 
     }
 
+    @ApiOperation(value="To get user by Id")
     @GetMapping("/getById/{id}")
     public ResponseEntity<?> getById(@PathVariable("id") long id) {
 
@@ -96,6 +101,7 @@ public class UserResource {
     }
 
 
+    @ApiOperation(value="To check if a particular user exists")
     @PostMapping("/isUserExists")
     public ResponseEntity<?> vaildateUserLogin(@RequestBody User user) {
 
@@ -108,6 +114,7 @@ public class UserResource {
         }
     }
 
+    @ApiOperation(value="To delete all users")
     @DeleteMapping("/deleteAllUsers")
     public ResponseEntity<?> deleteAllusers() {
 
@@ -121,6 +128,7 @@ public class UserResource {
 
     }
 
+    @ApiOperation(value="To display First level friends recommendations")
     @GetMapping("/getRecommendations/{level}/{id}")
     public ResponseEntity<?> getFirstLevelRecommendations(@PathVariable("level") int level, @PathVariable("id") long id) {
 
@@ -146,6 +154,7 @@ public class UserResource {
 
     }
 
+    @ApiOperation(value="To display second level friends recommendations")
     @GetMapping("/getUserFriendById/{userId}")
     public ResponseEntity<?> getUserFriendBYId(@PathVariable("userId") long userId) {
 
