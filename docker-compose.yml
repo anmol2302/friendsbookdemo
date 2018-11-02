@@ -13,7 +13,11 @@ services:
 
   friendsbook:
     image:  friendsbook
+
     build:  .
+
+    build:  ./
+
     restart:  always
     network_mode:  host
     container_name:  friendsbook
