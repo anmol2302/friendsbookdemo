@@ -70,7 +70,7 @@ export default class Signup extends Component{
             userProfileImageUrl:this.state.url,
             friends:[]
         }
-        axios.post('http://172.23.238.179:8080/api/v1/user/addUser',newrestro)
+        axios.post('http://172.23.238.179:8090/api/v1/user/addUser',newrestro)
         .then(res=>{
         const list=this.state.userlist
         const newuserlist=[...list,res.data]

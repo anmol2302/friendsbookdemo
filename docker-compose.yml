@@ -13,13 +13,25 @@ services:
 
   friendsbook:
     image:  friendsbook
-    build:  ../friendsbookdemo
+    build:  ../friendsBookStackroute
     restart:  always
     network_mode:  host
     container_name:  friendsbook
     depends_on:
       - neo4j
     ports:
-      - 8080:8080
+      - 8080:8090
     expose:
-      - 8080
+      - 8090
+
+  react-app:
+    build: friendbook
+    image: react
+    restart: always
+    container_name: react
+    network_mode: host
+    ports:
+    - 8081:8081
+    expose:
+      - 8081
+
