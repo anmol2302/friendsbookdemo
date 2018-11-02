@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0",
+    "start": "webpack-dev-server --host 0.0.0.0  --disable-host-check",
     "build": "webpack"
   },
   "keywords": [],
@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.1.2", 
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
