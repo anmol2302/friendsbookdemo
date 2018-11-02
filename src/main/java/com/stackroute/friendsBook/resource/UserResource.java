@@ -30,6 +30,7 @@ public class UserResource {
     UserService userService;
 
     @ApiOperation(value = "To add a new User")
+    @CrossOrigin(origins = "*")
     @PostMapping("/addUser")
     public ResponseEntity<?> addUser(@Valid @RequestBody User user) throws UserAlreadyExistsException {
         try {
@@ -48,6 +49,7 @@ public class UserResource {
     }
 
     @ApiOperation(value = "To get a list of all users")
+    @CrossOrigin(origins = "*")
     @GetMapping("/getAllUser")
     public ResponseEntity<?> getAllUser() {
 
@@ -68,6 +70,7 @@ public class UserResource {
     }
 
     @ApiOperation(value = "To add a friend")
+    @CrossOrigin(origins = "*")
     @PostMapping("/addFriend/{idPerson1}/{idPerson2}")
     public ResponseEntity<?> addFriend(@Valid @PathVariable("idPerson1") long idPerson1, @PathVariable("idPerson2") long idPerson2) {
         try {
@@ -94,6 +97,7 @@ public class UserResource {
     }
 
     @ApiOperation(value = "To get user by Id")
+    @CrossOrigin(origins = "*")
     @GetMapping("/getById/{id}")
     public ResponseEntity<?> getById(@PathVariable("id") long id) {
 
@@ -113,6 +117,7 @@ public class UserResource {
 
 
     @ApiOperation(value = "To check if a particular user exists")
+    @CrossOrigin(origins = "*")
     @PostMapping("/isUserExists")
     public ResponseEntity<?> vaildateUserLogin(@RequestBody User user) {
 
@@ -126,6 +131,7 @@ public class UserResource {
     }
 
     @ApiOperation(value = "To delete all users")
+    @CrossOrigin(origins = "*")
     @DeleteMapping("/deleteAllUsers")
     public ResponseEntity<?> deleteAllusers() {
 
@@ -140,6 +146,7 @@ public class UserResource {
     }
 
     @ApiOperation(value = "To display First level friends recommendations")
+    @CrossOrigin(origins = "*")
     @GetMapping("/getRecommendations/{level}/{id}")
     public ResponseEntity<?> getFirstLevelRecommendations(@PathVariable("level") int level, @PathVariable("id") long id) {
 
@@ -166,6 +173,7 @@ public class UserResource {
     }
 
     @ApiOperation(value = "To display second level friends recommendations")
+    @CrossOrigin(origins = "*")
     @GetMapping("/getUserFriendById/{userId}")
     public ResponseEntity<?> getUserFriendBYId(@PathVariable("userId") long userId) {
 
