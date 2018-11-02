@@ -1,0 +1,143 @@
+#link
+{
+    all: unset;
+}
+#mySelect
+{
+   float: right;
+   margin-right: 5em;
+}
+#rec{
+margin-left: 10em;
+}
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    
+  }
+
+
+
+
+#main
+{
+    text-align: center;
+    margin-top:1em;
+    margin-bottom: 0em;
+    border: 0.5em solid black;
+    width:40em;
+    margin-left: 15em;
+    /* margin-right:50em; */
+    padding: 2em;
+    background-color:darkgoldenrod;
+    
+}
+.signup{
+    width:40em;
+    margin-left: 15em;
+}
+#rowdiv
+{
+    border-radius: 16px;
+}
+#welcome
+{
+ text-align: center;
+    margin-top:0.5em; 
+    text-decoration-style: solid ;
+    font-style: italic;
+    font-weight: bold;
+}
+#btn
+{
+    text-align: center;
+    margin-right: 2em;
+  
+}
+#btn2
+{
+    margin-top: 1em;
+}
+#atag
+{
+    font-family: fantasy    ;
+}
+body{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background-image: url('../images/grunge-leather-background-texture-hd-300x200.jpg');
+    background-size: cover;
+}
+.card {
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  #no
+  {
+      text-align: center;
+      font-weight: bold;
+      font-family: fantasy;
+  }
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color:gray;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  .vl {
+    border-left: 5px solid green;
+    height: 500px;
+}
+#style{
+    text-align: center;
+    font-weight:blue bold;
+    font-family: fantasy;
+    font-style: italic;
+}
+#nameLabel
+{
+    margin-left:1em;
+}
+#emailLabel
+{
+    margin-left:1em;
+}
+#contactLabel
+{
+    margin-left:1em;
+}
+#addressLabel
+{
+    margin-left:1em;
+}
+#right {
+    margin-right:45em ;
+  }
+#right2
+  {
+    margin-right:42em ;
+  }
