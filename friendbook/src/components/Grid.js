@@ -1,13 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 import { timingSafeEqual } from 'crypto';
+import {withRouter} from 'react-router-dom';
+import { browserHistory } from 'react-router'
+
 
 
 export default class Grid extends React.Component{
 
     constructor(props){
         super(props)
-        this.state={userFriendListData:[],userData1:[],value:''};
+        this.state={userFriendListData:[],userData1:[],value:'',fried:false};
         this.handleSearch=this.handleSearch.bind(this);
         this.handleChange=this.handleChange.bind(this);
     }
@@ -34,7 +37,8 @@ handleChange(event) {
       console.log("fried name ",this.state.userData1.name);
       axios.post(`http://172.23.238.179:8090/api/v1/user/addFriend/${this.props.loginId}/${this.state.userData1.id}`)
       .then(resp=>{
-          alert("Friend Added")
+          alert("Friend Added");
+        this.setState({fried:true})
         console.log("friends ADDED ",resp);}
         )
   }
@@ -66,6 +70,7 @@ handleChange(event) {
                </div>
            </div>):<h4 id="no">No user is present with this name</h4>
  }
+ {(this.state.fried)?(<Link to="/next-page"><button>Go Back</button></Link>):""}
             </fragment>
         )
     }

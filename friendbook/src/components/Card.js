@@ -3,8 +3,16 @@ import {Link} from 'react-router-dom';
 export default class Card extends Component {
 constructor(props){
   super(props);
-  this.state={loginUserFriendData:this.props.userFriendList};
-}
+  this.state={loginUserFriendData:this.props.userFriendList,friendId:this.props.id};
+ }
+// viewFriend(event)
+//   {
+//       event.preventDefault();
+//       console.log("Click event");
+//       console.log("Id of  a particulaor Id",this.state.friendId);
+//       this.props.history.push({  pathname: '/next-page2',
+//       state: { friendId:this.state.friendId}})
+//   }
    render() {
     console.log("data",this.props.userFriendList);
     console.log('name', this.props.name);
@@ -21,11 +29,15 @@ constructor(props){
                <div className="card-body text-center">
                    <h5 className="card-title">
                        <a href="#">{this.props.name}</a>
+                       <p id="friendId">{this.props.id}</p>
                    </h5>
-                 <Link to="/next-page2"><button className="btn btn-info">View</button></Link>  
+                   <p className="title">{this.props.email}</p>
+                                <p>{this.props.address}</p>
+                                <button  className="btn btn-info">view</button>
                </div>
            </div>
            </div>
+         
        );
    }
 
