@@ -62535,7 +62535,7 @@ function (_React$Component) {
       var user = {
         'email': this.state.value
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8090/api/v1/user/isUserExists", user).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8080/api/v1/user/isUserExists", user).then(function (response) {
         console.log();
 
         _this2.setState(function (state, props) {
@@ -62566,7 +62566,7 @@ function (_React$Component) {
       console.log("Add friend", this.props.loginId);
       console.log("friedn id ", this.state.userData1.id);
       console.log("fried name ", this.state.userData1.name);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8090/api/v1/user/addFriend/".concat(this.props.loginId, "/").concat(this.state.userData1.id)).then(function (resp) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8080/api/v1/user/addFriend/".concat(this.props.loginId, "/").concat(this.state.userData1.id)).then(function (resp) {
         alert("Friend Added");
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
           to: "/next-page"
@@ -62582,7 +62582,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return console.log("navpage to grid ", this.props.userFriendListData), console.log("user data", this.state.userData1), console.log("user data name ", this.state.userData1.name), console.log("user data length ", this.state.userData1.length), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fragment", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return console.log("navpage to grid ", this.props.userFriendListData), console.log("user data", this.state.userData1), console.log("user data name ", this.state.userData1.name), console.log("user data length ", this.state.userData1.length), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSearch
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -63033,7 +63033,7 @@ function (_React$Component) {
     value: function render() {
       return console.log("login User id", this.props.location.state.loginId), console.log("navpage to grid 2", this.props.userFriendListData), console.log("user data", this.state.userData1), console.log("user data name ", this.state.userData1.name), console.log("user data length ", this.state.userData1.length), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSearch
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -63064,7 +63064,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, this.state.userData1.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, this.state.userData1.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, this.state.userData1.contactNo)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.addFriend.bind(this),
         className: "btn btn-info"
-      }, "Add Friend"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "You have no friends right now :") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Enter mail first")));
+      }, "Add Friend"))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "You have no friends right now :") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Enter mail first"));
     }
   }]);
 
