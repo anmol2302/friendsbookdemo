@@ -48,7 +48,7 @@ handleChange(event) {
             console.log("user data name ",this.state.userData1.name),
             console.log("user data length ",this.state.userData1.length),
             <div className="search">
-            <fragment>
+            <Fragment>
           <form onSubmit={this.handleSearch}>
       <table><tr><td>
       <input  type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search"/></td><td>
@@ -70,7 +70,7 @@ handleChange(event) {
                </div>
            </div>):<h4>You have no friends right now :</h4>):<h3>Enter mail first</h3>
  }
-            </fragment>
+            </Fragment>
             </div>
         )
     }
