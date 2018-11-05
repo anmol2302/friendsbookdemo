@@ -7,13 +7,14 @@ export default class Search extends React.Component{
 
     constructor(props){
         super(props)
-        this.state={userFriendListData:[],userData1:[],value:''};
+        this.state={userFriendListData:[],userData1:[],value:'',view:false};
         this.handleSearch=this.handleSearch.bind(this);
         this.handleChange=this.handleChange.bind(this);
     }
     handleSearch(event){
         event.preventDefault();
         console.log("from grid value ",this.state.value);
+        this.setState({view:true})
          let user = {
           'email': this.state.value
         }
@@ -46,6 +47,7 @@ handleChange(event) {
             console.log("user data",this.state.userData1),
             console.log("user data name ",this.state.userData1.name),
             console.log("user data length ",this.state.userData1.length),
+            <div className="search">
             <fragment>
           <form onSubmit={this.handleSearch}>
       <table><tr><td>
@@ -53,7 +55,8 @@ handleChange(event) {
       <button ><i className="fa fa-search"></i></button>
       </td></tr></table>
        </form>
- { (this.state.userData1)?(
+{(this.state.view)?(
+  (this.state.userData1)?(
   <div className="card col-sm-12 mx-auto my-5 recommendation-card" >
   {(this.state.userData1.userProfileImageUrl )?
   (<img className="card-img-top" src={this.state.userData1.userProfileImageUrl} alt="" style={{ width: "100%" }}></img>):(<img src="https://articles-images.sftcdn.net/wp-content/uploads/sites/3/2016/01/wallpaper-for-facebook-profile-photo.jpg" alt="" style={{ width: "100%" }} />)}
@@ -65,9 +68,10 @@ handleChange(event) {
                    </h5>
                 <button onClick={this.addFriend.bind(this)} className="btn btn-info">Add Friend</button>
                </div>
-           </div>):<h4>You have no friends right now :</h4>
+           </div>):<h4>You have no friends right now :</h4>):<h3>Enter mail first</h3>
  }
             </fragment>
+            </div>
         )
     }
 }
