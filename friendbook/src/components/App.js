@@ -56,9 +56,11 @@ handleSubmit(event) {
 
   })}
   else{
-    alert("Enter mail first");
+    alert("Enter mail first")
   }
 }
+
+
   render() {
     return (
       <Container className="App">
@@ -79,11 +81,13 @@ handleSubmit(event) {
                 value={this.state.value}
                 onChange={this.handleChange}
               />
+
             </FormGroup>
           </Col>
         <Button className="btn btn-primary"  id="btn">Login</Button>
       <Link to="/signup"  ><Button  className="btn btn-primary" id="btn2"  >SignUp</Button></Link>
         </Form>
+       
         </div>
         {/* <Nextpage org={this.state.user}/> */}
       </Container>
