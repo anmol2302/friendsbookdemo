@@ -70,7 +70,7 @@ import Grid from './Grid';
                                     <i className="fa fa-linkedin"></i>
                                     <i className="fa fa-facebook"></i>
                                 </div>
-                                <p><Link to="/next-page2"><button>Contact</button></Link></p>
+                                {/* <p><Link to="/next-page2"><button>Contact</button></Link></p> */}
                             </div>
                         </div>
                 
