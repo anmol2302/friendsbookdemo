@@ -2,8 +2,9 @@ import React from "react";
 import {Link} from 'react-router-dom';
  const nexPage2 = () => {
       return (
+          console.log("Next=page 2",this.props.id),
         <div className="container emp-profile">
-        <h1>Friends Of User</h1>
+        <h1>Friends Of </h1>
         <form method="post">
             <div className="row">
                 <div className="col-md-4">

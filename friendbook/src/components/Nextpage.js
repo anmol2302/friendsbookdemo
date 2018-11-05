@@ -45,7 +45,7 @@ import Grid from './Grid';
 </Link>
 {/* <button >Search friend</button><Link> */}
 {/* <div class="custom-select" style={{width:"200px"}}> */}
-               <select  class="custom-select" style={{width:"200px"}} id="mySelect" onChange={this.change.bind(this)}>
+<select  class="custom-select" style={{width:"200px"}} id="mySelect" onChange={this.change.bind(this)}>
   <option  >Recommendation</option>
   <option  >Level1</option>
   <option  >Level2</option>
@@ -70,7 +70,7 @@ import Grid from './Grid';
                                     <i className="fa fa-linkedin"></i>
                                     <i className="fa fa-facebook"></i>
                                 </div>
-                                <p><Link to="/next-page2"><button>Contact</button></Link></p>
+                                {/* <p><Link to="/next-page2"><button>Contact</button></Link></p> */}
                             </div>
                         </div>
                 
@@ -89,61 +89,11 @@ import Grid from './Grid';
 
                     <hr></hr>
                     <div>
-
-                        {/* <h3>Recomondation</h3> */}
-
-                        {/* <h3>Recomondation</h3>
-                        <div className="container col-md-4">
-                            <div className="card">
-                                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog' alt="" style={{ width: "100%" }} />
-                                <h1>John Doe</h1>
-                                <p className="title">CEO  Founder, Example</p>
-                                <p>Harvard University</p>
-                                <div style={{ margin: " 24px 0" }}>
-                                    <i className="fa fa-dribbble"></i>
-                                    <i className="fa fa-twitter"></i>
-                                    <i className="fa fa-linkedin"></i>
-                                    <i className="fa fa-facebook"></i>
-                                </div>
-                                <p><Link to="/next-page2"><button>Contact</button></Link></p>
-                            </div>
-
-                        </div> */}
                     </div>
                 </form>
             </div>
             </fragment>
         );
-    }
-
-// export default class Nextpage extends React.Component{
-// // constructor(props){
-// // super(props)
-// // this.state={loginUserDataFriends:[]};
-// // console.log("seciomf ",this.props.location.state.detail.id)
-// // axios.get(`http://localhost:8080/api/v1/user/getUserFriendById/${this.props.location.state.detail.id}`)
-// // .then(userFriendList=>{
-// // this.setState((state, props) => ({userFriendListData: userFriendList.data}));
-// // });}
-// render(){
-//     console.log("state data",this.state.userFriendListData)
-// const createUserCard=(
-//     <div class="col-md-4">
-// {[0,1].map(friend => <Card userFriendList={this.state.loginUserDataFriends[friend]}/>)}    
-// </div>
-//     )
-// return(
-
-// <div>{createUserCard}</div>);
-
-
-// }
-
-
-
-
-
-
-
+                              }
 }
 

@@ -13,12 +13,9 @@ class AppRouter extends React.Component
     render  ()
     {
         return (
-          
             <fragment>        
  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
 <a className="navbar-brand" id="atag" href="#">FriendsBook</a>
-
-
 </nav> 
 
             <BrowserRouter>

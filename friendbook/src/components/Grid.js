@@ -70,7 +70,7 @@ handleChange(event) {
                </div>
            </div>):<h4 id="no">No user is present with this name</h4>
  }
- {(this.state.fried)?(<Link to="/next-page"><button>Go Back</button></Link>):""}
+ {/* {(this.state.fried)?(<Link to="/next-page"><button>Go Back</button></Link>):""} */}
             </fragment>
         )
     }
