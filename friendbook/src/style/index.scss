@@ -57,11 +57,15 @@ margin-left: 10em;
 {
     margin-top: 1em;
 }
+#friendId{
+    display: none;
+}
 #atag
 {
     // font-family: fantasy;
     font-family: 'Sofia';
     font-size: 30px;
+    margin-left: 10em;
 }
 body{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
