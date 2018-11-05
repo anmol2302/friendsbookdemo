@@ -9,13 +9,13 @@ export default class Card extends Component {
         super(props);
         this.state = { loginUserFriendData: this.props.userFriendList, friendId: this.props.id };
     }
-    // handleSubmit(event) {
-    //     event.preventDefault();
-    //     console.log("User id",this.props.id);
-    //     //this.props.history.push({  pathname: '/next-page2'})
-    //  // state: { detail: this.props.id}})
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log("User id",this.state.friendId);
+        //this.props.history.push({  pathname: '/next-page2'})
+     // state: { detail: this.props.id}})
         
-    //   }
+      }
     render() {
         console.log("data", this.props.userFriendList);
         console.log('name', this.props.name);
@@ -36,10 +36,10 @@ export default class Card extends Component {
                         </h5>
                         <p className="title">{this.props.email}</p>
                         <p>{this.props.address}</p>
-                        {/* <Form className="form" onSubmit={this.handleSubmit.bind(this)}> */}
+                     {/* <Form className="form" onSubmit={this.handleSubmit.bind(this)}>  */}
                             {/* <Button className="btn btn-primary" onClick={this.handleSubmit.bind(this)}>View</Button> */}
                             {/* <Link to={{ pathname: '/next-page2', state: { id:this.state.friendId} }}> */}
-                 {/* <button  className="btn btn-info" onSubmit={this.handleSubmit.bind(this)} >view</button> */}
+                 {/* <Button  className="btn btn-info" >view</Button> */}
                  {/* </Link> */}
                         {/* </Form> */}
                     </div>

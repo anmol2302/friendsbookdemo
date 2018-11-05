@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import Card from './Card';
 import Grid from './Grid';
+import {
+     Button,
+   } from 'reactstrap';
 
  export default class Nextpage extends React.Component {
     constructor(props){
@@ -13,8 +16,7 @@ import Grid from './Grid';
         .then(userFriendListResp=>{
             console.log("the friend list response from s",userFriendListResp.data)
         this.setState((state, props) => ({userFriendListData: userFriendListResp.data}));
-        });
-        
+        });  
     }
     change(event){
         console.log("dropdownload display");
@@ -26,7 +28,6 @@ import Grid from './Grid';
             state: { levelid: this.state.levelid,index:indexValue}})
        
     }
-    
     render() {
          return (
             
@@ -42,6 +43,7 @@ import Grid from './Grid';
     }
    }} >
  <button type="button" className="btn">Search Friend</button>
+ <Link to="/"  ><Button  className="btn btn-primary" id="btn2"  >Logout</Button></Link>
 </Link>
 {/* <button >Search friend</button><Link> */}
 {/* <div class="custom-select" style={{width:"200px"}}> */}
@@ -86,7 +88,6 @@ import Grid from './Grid';
                             </div>
                         </div>
                     </div>
-
                     <hr></hr>
                     <div>
                     </div>
