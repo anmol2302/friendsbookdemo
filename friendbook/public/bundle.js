@@ -62277,7 +62277,7 @@ function (_Component) {
       };
 
       if (this.state.view) {
-        axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("http://172.23.238.179:8090/api/v1/user/isUserExists", user).then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("http://172.23.238.179:8080/api/v1/user/isUserExists", user).then(function (response) {
           _this2.setState(function (state, props) {
             return {
               userData: response.data
@@ -62860,7 +62860,7 @@ function (_React$Component) {
     };
 
     if (_this.state.index == 1) {
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://172.23.238.179:8090/api/v1/user/getRecommendations/1/".concat(_this.state.id)).then(function (resp) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://172.23.238.179:8080/api/v1/user/getRecommendations/1/".concat(_this.state.id)).then(function (resp) {
         console.log("resp data index 1 ", resp.data);
 
         _this.setState(function (state, props) {
@@ -62872,7 +62872,7 @@ function (_React$Component) {
     }
 
     if (_this.state.index == 2) {
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://172.23.238.179:8090/api/v1/user/getRecommendations/2/".concat(_this.state.id)).then(function (resp) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("http://172.23.238.179:8080/api/v1/user/getRecommendations/2/".concat(_this.state.id)).then(function (resp) {
         console.log("resp data index 2 ", resp.data);
 
         _this.setState(function (state, props) {
@@ -62999,7 +62999,7 @@ function (_React$Component) {
       var user = {
         'email': this.state.value
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8090/api/v1/user/isUserExists", user).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8080/api/v1/user/isUserExists", user).then(function (response) {
         console.log();
 
         _this2.setState(function (state, props) {
@@ -63023,7 +63023,7 @@ function (_React$Component) {
       console.log("Add friend", this.props.location.state.loginId);
       console.log("friedn id ", this.state.userData1.id);
       console.log("fried name ", this.state.userData1.name);
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8090/api/v1/user/addFriend/".concat(this.props.location.state.loginId, "/").concat(this.state.userData1.id)).then(function (resp) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("http://172.23.238.179:8080/api/v1/user/addFriend/".concat(this.props.location.state.loginId, "/").concat(this.state.userData1.id)).then(function (resp) {
         alert("Friend Added");
         console.log("friends ADDED ", resp);
       });
@@ -63201,7 +63201,7 @@ function (_Component) {
         userProfileImageUrl: this.state.url,
         friends: []
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://172.23.238.179:8090/api/v1/user/addUser', newrestro).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://172.23.238.179:8080/api/v1/user/addUser', newrestro).then(function (res) {
         var list = _this2.state.userlist;
 
         var newuserlist = _toConsumableArray(list).concat([res.data]);
