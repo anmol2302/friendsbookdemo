@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 import axios from 'axios';
 import { timingSafeEqual } from 'crypto';
 import {withRouter} from 'react-router-dom';
@@ -19,7 +19,7 @@ export default class Grid extends React.Component{
           'email': this.state.value
         }
       
-        axios.post(`http://172.23.238.179:8090/api/v1/user/isUserExists`,user)
+        axios.post(`http://172.23.238.179:8080/api/v1/user/isUserExists`,user)
         .then(response => {
             console.log()
           this.setState((state, props) => ({userData1: response.data}))
@@ -37,7 +37,7 @@ handleChange(event) {
       console.log("Add friend",this.props.loginId);
       console.log("friedn id ",this.state.userData1.id);
       console.log("fried name ",this.state.userData1.name);
-      axios.post(`http://172.23.238.179:8090/api/v1/user/addFriend/${this.props.loginId}/${this.state.userData1.id}`)
+      axios.post(`http://172.23.238.179:8080/api/v1/user/addFriend/${this.props.loginId}/${this.state.userData1.id}`)
       .then(resp=>{
           alert("Friend Added");
           <Link to="/next-page"></Link>
@@ -53,8 +53,8 @@ handleChange(event) {
             console.log("user data",this.state.userData1),
             console.log("user data name ",this.state.userData1.name),
             console.log("user data length ",this.state.userData1.length),
-            <fragment>
-          <form onSubmit={this.handleSearch}>
+         <div>
+         <form onSubmit={this.handleSearch}>
       <table><tr><td>
       <input  type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search"/></td><td>
       <button ><i className="fa fa-search"></i></button>
@@ -75,7 +75,7 @@ handleChange(event) {
            </div>):<h4 id="no">No user is present with this name</h4>
  }
  {/* {(this.state.fried)?(<Link to="/next-page"><button>Go Back</button></Link>):""} */}
-            </fragment>
+ </div>   
         )
     }
 }
