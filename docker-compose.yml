@@ -17,7 +17,7 @@ services:
     restart:  always
 #    network_mode:  host
     container_name:  friendsbook
-    depends_on:
+    links:
       - neo4j
     ports:
       - 8080:8090
