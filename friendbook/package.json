@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --disableHostCheck: true --inline --progress --port80 --hot",
+    "start": "webpack-dev-server --host 0.0.0.0 --disableHostCheck: true --inline --progress --port80 --hot --allowed-hosts .internal.stackroute.in/friend-book",
     "build": "webpack"
   },
   "keywords": [],
