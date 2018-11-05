@@ -33,7 +33,7 @@ constructor(props){
                    </h5>
                    <p className="title">{this.props.email}</p>
                                 <p>{this.props.address}</p>
-                                <button  className="btn btn-info">view</button>
+                                {/* <button  className="btn btn-info">view</button> */}
                </div>
            </div>
            </div>
