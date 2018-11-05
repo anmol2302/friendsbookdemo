@@ -47,6 +47,7 @@ public class UserResourceTests {
         MockitoAnnotations.initMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(userResource).build();
         user = new User();
+        user.setId(1L);
         user.setAddress("Bangalore");
         user.setContactNo("987654321");
         user.setEmail("a@gmail.com");
@@ -87,6 +88,19 @@ public class UserResourceTests {
                 .andDo(MockMvcResultHandlers.print());
 
     }
+
+
+    @Test
+    public void getById() throws Exception {
+        User user1 = new User(1L, "a", "a@gmail.com", "Bangalore", "10",null,"wuihjwxs");
+        when(userService.getBYId(user1.getId())).thenReturn(user);
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/user/getById/1")
+                .contentType(MediaType.APPLICATION_JSON).content(asJsonString(user1)))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcResultHandlers.print());
+
+    }
+
 
     private static String asJsonString(final Object obj) {
         try {
