@@ -21,7 +21,9 @@ class App extends Component {
       contactNo:'',
       userData:[],
       isUserExists:false,
-      detail:""};
+      detail:"",
+      view:false
+    };
         // this.rowCallback = this.rowCallback.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -29,7 +31,7 @@ class App extends Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({value: event.target.value,view:true});
   }
 handleSubmit(event) {
   event.preventDefault();
@@ -37,7 +39,7 @@ handleSubmit(event) {
   let user = {
     'email': this.state.value
   };
-
+  if(this.state.view){
   axios.post(`http://172.23.238.179:8090/api/v1/user/isUserExists`,user)
   .then(response => {
     this.setState((state, props) => ({userData: response.data}));
@@ -53,8 +55,10 @@ handleSubmit(event) {
     }
 
   })}
-
-
+  else{
+    alert("Enter mail first");
+  }
+}
   render() {
     return (
       <Container className="App">
