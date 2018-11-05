@@ -19,7 +19,7 @@ export default class Search extends React.Component{
           'email': this.state.value
         }
       
-        axios.post(`http://172.23.238.179:8090/api/v1/user/isUserExists`,user)
+        axios.post(`http://172.23.238.179:8080/api/v1/user/isUserExists`,user)
         .then(response => {
             console.log()
           this.setState((state, props) => ({userData1: response.data}))
@@ -33,7 +33,7 @@ handleChange(event) {
       console.log("Add friend",this.props.location.state.loginId);
       console.log("friedn id ",this.state.userData1.id);
       console.log("fried name ",this.state.userData1.name);
-      axios.post(`http://172.23.238.179:8090/api/v1/user/addFriend/${this.props.location.state.loginId}/${this.state.userData1.id}`)
+      axios.post(`http://172.23.238.179:8080/api/v1/user/addFriend/${this.props.location.state.loginId}/${this.state.userData1.id}`)
       .then(resp=>{
           alert("Friend Added")
         console.log("friends ADDED ",resp);}
