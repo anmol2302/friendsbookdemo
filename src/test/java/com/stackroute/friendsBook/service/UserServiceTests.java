@@ -79,5 +79,13 @@ public class UserServiceTests {
 
     }
 
+    @Test
+    public void testgetById(){
+
+        userRepository.save(user);
+        when(userRepository.getByid(1L)).thenReturn(user);
+        Assert.assertEquals("a@gmail.com", user.getEmail() );
+
+    }
 
 }
