@@ -21,7 +21,8 @@ export default class Grid extends React.Component {
         axios.post(`http://172.23.238.179:8090/api/v1/user/isUserExists`, user)
             .then(response => {
                 console.log()
-                this.setState((state, props) => ({ userData1: response.data }))
+                this.setState((state, props) => ({ userData1: response.data,
+                    friend:true }))
             })
     }
     handleChange(event) {
@@ -51,6 +52,7 @@ export default class Grid extends React.Component {
             console.log("user data", this.state.userData1),
             console.log("user data name ", this.state.userData1.name),
             console.log("user data length ", this.state.userData1.length),
+            this.state.friend?(
             <div>
                 <form onSubmit={this.handleSearch}>
                     <table><tr><td>
@@ -68,12 +70,38 @@ export default class Grid extends React.Component {
                                 <h4>{this.state.userData1.email}</h4>
                                 <h4>{this.state.userData1.contactNo}</h4>
                             </h5>
-                            <button onClick={this.addFriend.bind(this)} className="btn btn-info">Add Friend</button>
+                            <button onClick={this.addFriend.bind(this)} className="btn btn-info" data-toggle="modal" data-target="#myModal">Add Friend</button>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Frien Added</h4>
+      </div>
+      <div class="modal-body">
+        <p>Added in your friend list .</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
                         </div>
                     </div>) : <h4 id="no">No user is present with this name</h4>
                 }
                 {/* {(this.state.fried)?(<Link to="/next-page"><button>Go Back</button></Link>):""} */}
-            </div>
+            </div>):  <form onSubmit={this.handleSearch}>
+                    <table><tr><td>
+                        <input type="text" value={this.state.value} onChange={this.handleChange} placeholder="Search" /></td><td>
+                            <button ><i className="fa fa-search"></i></button>
+                        </td></tr></table>
+                </form>
         )
     }
 }
