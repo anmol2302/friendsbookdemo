@@ -15,7 +15,7 @@ services:
     image:  friendsbook
     build:  ./
     restart:  always
-#    network_mode:  host
+    network_mode:  host
     container_name:  friendsbook
     links:
       - neo4j
@@ -29,7 +29,7 @@ services:
     image: react
     restart: always
     container_name: react
-  #  network_mode: host
+    network_mode: host
     ports:
     - 8081:8081
     expose:
