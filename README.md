@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/anmol2302/friendsbookdemo/tree/master.svg?style=svg)](https://circleci.com/gh/anmol2302/friendsbookdemo/tree/master)
 # friendsbookdemo
 # Spring Boot with SpringData Neo4J
 Application to add user in social media

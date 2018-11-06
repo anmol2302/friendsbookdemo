@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.stackroute.friendsBook.repository.UserRepositoryTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.78 s <<< FAILURE! - in com.stackroute.friendsBook.repository.UserRepositoryTests
+testGetAllUsers(com.stackroute.friendsBook.repository.UserRepositoryTests)  Time elapsed: 1.281 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<a@g[mail].com> but was:<a@g[].com>
+	at com.stackroute.friendsBook.repository.UserRepositoryTests.testGetAllUsers(UserRepositoryTests.java:53)
+
+getAllUserEmails(com.stackroute.friendsBook.repository.UserRepositoryTests)  Time elapsed: 0.029 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<a@g[mail].com> but was:<a@g[].com>
+	at com.stackroute.friendsBook.repository.UserRepositoryTests.getAllUserEmails(UserRepositoryTests.java:74)
+

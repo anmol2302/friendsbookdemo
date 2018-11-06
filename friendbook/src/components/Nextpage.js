@@ -17,6 +17,13 @@ export default class Nextpage extends React.Component {
                 console.log("the friend list response from s", userFriendListResp.data)
                 this.setState((state, props) => ({ userFriendListData: userFriendListResp.data }));
             });
+        this.state={userFriendListData:[],userData:[],value:'',levelid:this.props.location.state.detail.id};
+        console.log("seciomf ",this.props.location.state.detail.id)
+        axios.get(`http://172.23.238.179:8080/api/v1/user/getUserFriendById/${this.props.location.state.detail.id}`)
+        .then(userFriendListResp=>{
+            console.log("the friend list response from s",userFriendListResp.data)
+        this.setState((state, props) => ({userFriendListData: userFriendListResp.data}));
+        });  
     }
     change(event) {
         console.log("dropdownload display");

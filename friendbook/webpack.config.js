@@ -8,7 +8,10 @@ var config = {
    output: {
        path: DIST_DIR,
        filename: "bundle.js"
-   },
+   }
+   ,devServer: {
+    disableHostCheck: true
+},
    devtool:"cheap-module-source-map",
    module: {
        rules: [
