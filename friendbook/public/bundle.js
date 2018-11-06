@@ -11572,7 +11572,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "#link\n{\n    all: unset;\n}\n.search{\n    margin-left: 14em;\n}\n#mySelect\n{\n   float: right;\n   margin-right: 5em;\n}\n#rec{\nmargin-left: 10em;\n}\n.custom-select {\n    position: relative;\n    font-family: Arial;\n    \n  }\n#main\n{\n    text-align: center;\n    margin-top:1em;\n    margin-bottom: 0em;\n    border: 0.5em solid black;\n    width:40em;\n    margin-left: 15em;\n    /* margin-right:50em; */\n    padding: 2em;\n    background-color:darkgoldenrod;\n    \n}\n.signup{\n    width:40em;\n    margin-left: 15em;\n}\n#rowdiv\n{\n    border-radius: 16px;\n}\n#welcome\n{\n text-align: center;\n    margin-top:0.5em; \n    text-decoration-style: solid ;\n    font-style: italic;\n    font-weight: bold;\n}\n#btn\n{\n    text-align: center;\n    margin-right: 2em;\n  \n}\n#btn2\n{\n    margin-top: 1em;\n}\n#friendId{\n    display: none;\n}\n#atag\n{\n    // font-family: fantasy;\n    font-family: 'Sofia';\n    font-size: 30px;\n    margin-left: 10em;\n}\nbody{\n    background: -webkit-linear-gradient(left, #3931af, #00c6ff);\n    background-image: url(" + escape(__webpack_require__(/*! ../images/wall-leaves-wooden-207301.jpg */ "./src/images/wall-leaves-wooden-207301.jpg")) + ");\n    background-size: cover;\n}\n.card {\n    \n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\n    max-width: 200px;\n    margin: auto;\n    text-align: center;\n    font-family: arial;\n  }\n  #no\n  {\n      text-align: center;\n      font-weight: bold;\n      font-family: fantasy;\n  }\n  .title {\n    color: grey;\n    font-size: 18px;\n  }\n  \n  button {\n    border: none;\n    outline: 0;\n    display: inline-block;\n    padding: 8px;\n    color: white;\n    background-color:gray;\n    text-align: center;\n    cursor: pointer;\n    width: 100%;\n    font-size: 18px;\n  }\n  \n  a {\n    text-decoration: none;\n    font-size: 22px;\n    color: black;\n  }\n  \n  button:hover, a:hover {\n    opacity: 0.7;\n  }\n  .vl {\n    border-left: 5px solid green;\n    height: 500px;\n}\n#style{\n    text-align: center;\n    font-weight:blue bold;\n    font-family: fantasy;\n    font-style: italic;\n}\n#nameLabel\n{\n    margin-left:1em;\n}\n#emailLabel\n{\n    margin-left:1em;\n}\n#contactLabel\n{\n    margin-left:1em;\n}\n#addressLabel\n{\n    margin-left:1em;\n}\n#right {\n    margin-right:45em ;\n  }\n#right2\n  {\n    margin-right:42em ;\n  }\n", ""]);
+exports.push([module.i, "#link\n{\n    all: unset;\n}\n#mySelect\n{\n   float: right;\n   margin-right: 5em;\n}\n#rec{\nmargin-left: 10em;\n}\n.custom-select {\n    position: relative;\n    font-family: Arial;\n    \n  }\n\n\n\n\n#main\n{\n    text-align: center;\n    margin-top:1em;\n    margin-bottom: 0em;\n    border: 0.5em solid black;\n    width:40em;\n    margin-left: 15em;\n    /* margin-right:50em; */\n    padding: 2em;\n    background-color:darkgoldenrod;\n    \n}\n.signup{\n    width:40em;\n    margin-left: 15em;\n}\n#rowdiv\n{\n    border-radius: 16px;\n}\n#welcome\n{\n text-align: center;\n    margin-top:0.5em; \n    text-decoration-style: solid ;\n    font-style: italic;\n    font-weight: bold;\n}\n#btn\n{\n    text-align: center;\n    margin-right: 2em;\n  \n}\n#btn2\n{\n    margin-top: 1em;\n}\n#atag\n{\n    font-family: fantasy    ;\n}\nbody{\n    background: -webkit-linear-gradient(left, #3931af, #00c6ff);\n    background-image: url(" + escape(__webpack_require__(/*! ../images/wall-leaves-wooden-207301.jpg */ "./src/images/wall-leaves-wooden-207301.jpg")) + ");\n    background-size: cover;\n}\n.card {\n    \n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\n    max-width: 200px;\n    margin: auto;\n    text-align: center;\n    font-family: arial;\n  }\n  #no\n  {\n      text-align: center;\n      font-weight: bold;\n      font-family: fantasy;\n  }\n  .title {\n    color: grey;\n    font-size: 18px;\n  }\n  \n  button {\n    border: none;\n    outline: 0;\n    display: inline-block;\n    padding: 8px;\n    color: white;\n    background-color:gray;\n    text-align: center;\n    cursor: pointer;\n    width: 100%;\n    font-size: 18px;\n  }\n  \n  a {\n    text-decoration: none;\n    font-size: 22px;\n    color: black;\n  }\n  \n  button:hover, a:hover {\n    opacity: 0.7;\n  }\n  .vl {\n    border-left: 5px solid green;\n    height: 500px;\n}\n#style{\n    text-align: center;\n    font-weight:blue bold;\n    font-family: fantasy;\n    font-style: italic;\n}\n#nameLabel\n{\n    margin-left:1em;\n}\n#emailLabel\n{\n    margin-left:1em;\n}\n#contactLabel\n{\n    margin-left:1em;\n}\n#addressLabel\n{\n    margin-left:1em;\n}\n#right {\n    margin-right:45em ;\n  }\n#right2\n  {\n    margin-right:42em ;\n  }\n", ""]);
 
 // exports
 
@@ -62419,8 +62419,13 @@ function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
-      console.log("User id", this.state.friendId); //this.props.history.push({  pathname: '/next-page2'})
-      // state: { detail: this.props.id}})
+      console.log("User id", this.state.friendId);
+      this.props.history.push({
+        pathname: '/next-page2',
+        state: {
+          detail: this.props.id
+        }
+      });
     }
   }, {
     key: "render",
@@ -62446,7 +62451,10 @@ function (_Component) {
         id: "friendId"
       }, this.props.id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "title"
-      }, this.props.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.address))));
+      }, this.props.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        className: "btn btn-info",
+        onClick: this.handleSubmit.bind(this)
+      }, "view"))));
     }
   }]);
 
