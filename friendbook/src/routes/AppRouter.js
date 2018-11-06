@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter , Route,Switch ,Link} from  "react-router-dom";
 import NextPage from "../components/Nextpage";
-import NextPage2 from "../components/nextpage2"
+import NextPage2 from "../components/NextPage2"
 import App from "../components/App";
 import Grid from "../components/Grid";
 import Recomandation from "../components/Recomandation";

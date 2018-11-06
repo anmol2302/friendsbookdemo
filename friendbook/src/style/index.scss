@@ -2,22 +2,20 @@
 {
     all: unset;
 }
-.search{
-    margin-left: 14em;
-}
 #mySelect
 {
    float: right;
    margin-right: 5em;
 }
 #rec{
-margin-left: 10em;
+    color: red;
+    margin: 0px;
+    text-align: center;
 }
 .custom-select {
     position: relative;
     font-family: Arial;
-    
-  }
+}
 #main
 {
     text-align: center;
@@ -57,15 +55,12 @@ margin-left: 10em;
 {
     margin-top: 1em;
 }
-#friendId{
-    display: none;
-}
 #atag
 {
-    // font-family: fantasy;
     font-family: 'Sofia';
-    font-size: 30px;
+    font-size: 22px;
     margin-left: 10em;
+
 }
 body{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
