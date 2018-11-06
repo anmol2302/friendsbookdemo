@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.stackroute.friendsBook.FriendsBookApplicationTests" time="2.962" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.stackroute.friendsBook.resource.UserResourceTests" time="0.797" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -60,5 +60,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="54.0"/>
   </properties>
-  <testcase name="contextLoads" classname="com.stackroute.friendsBook.FriendsBookApplicationTests" time="0.042"/>
+  <testcase name="addUsers" classname="com.stackroute.friendsBook.resource.UserResourceTests" time="0.123"/>
+  <testcase name="getAllUsers" classname="com.stackroute.friendsBook.resource.UserResourceTests" time="0.019"/>
+  <testcase name="getById" classname="com.stackroute.friendsBook.resource.UserResourceTests" time="0.019"/>
+  <testcase name="addUsersFailure" classname="com.stackroute.friendsBook.resource.UserResourceTests" time="0.022"/>
 </testsuite>
