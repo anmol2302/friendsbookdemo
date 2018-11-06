@@ -12,7 +12,7 @@ export default class NextPage2 extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://172.23.238.179:8080/api/v1/user/getById/${this.props.location.state.friendId}`)
+        axios.get(`http://172.23.238.179:8090/api/v1/user/getById/${this.props.location.state.friendId}`)
             .then((resp) => {
                 console.log(resp.data);
                 this.setState({
@@ -20,7 +20,7 @@ export default class NextPage2 extends React.Component {
                 })
             }
             ).then((resp) => {
-                axios.get(`http://172.23.238.179:8080/api/v1/user/getUserFriendById/${this.props.location.state.friendId}`)
+                axios.get(`http://172.23.238.179:8090/api/v1/user/getUserFriendById/${this.props.location.state.friendId}`)
                     .then((resp) => {
                         this.setState({ userfriend: resp.data })
                         console.log("friends Data in next page 2 ", resp.data)

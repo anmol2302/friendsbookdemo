@@ -18,7 +18,7 @@ export default class Grid extends React.Component {
         let user = {
             'email': this.state.value
         }
-        axios.post(`http://172.23.238.179:8080/api/v1/user/isUserExists`, user)
+        axios.post(`http://172.23.238.179:8090/api/v1/user/isUserExists`, user)
             .then(response => {
                 console.log()
                 this.setState((state, props) => ({ userData1: response.data }))
@@ -35,7 +35,7 @@ export default class Grid extends React.Component {
         console.log("Add friend", this.props.loginId);
         console.log("friedn id ", this.state.userData1.id);
         console.log("fried name ", this.state.userData1.name);
-        axios.post(`http://172.23.238.179:8080/api/v1/user/addFriend/${this.props.loginId}/${this.state.userData1.id}`)
+        axios.post(`http://172.23.238.179:8090/api/v1/user/addFriend/${this.props.loginId}/${this.state.userData1.id}`)
             .then(resp => {
               //  alert("Friend Added");
                 <Link to="/next-page"></Link>
